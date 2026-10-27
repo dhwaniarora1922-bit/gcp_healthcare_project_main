@@ -1,66 +1,72 @@
--- Description: Create external tables for bronze dataset in BigQuery
--- please do not forget to replace the bucket path
+-- description: create external tables for bronze dataset in BQ
+-- do not forget to replace the bucket path
+-- for hospital a
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.departments_ha` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-a/departments/*.json']
+
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.departments_ha`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-a/departments/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.encounters_ha` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-a/encounters/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.encounters_ha`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-a/encounters/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.patients_ha` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-a/patients/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.patients_ha`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-a/patients/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.providers_ha` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-a/providers/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.providers_ha`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-a/providers/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.transactions_ha` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-a/transactions/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.transactions_ha`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-a/transactions/*.json"]
 );
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.departments_hb` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-b/departments/*.json']
+-- description: create external tables for bronze dataset in BQ
+-- do not forget to replace the bucket path
+-- for hospital b
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.departments_hb`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-b/departments/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.encounters_hb` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-b/encounters/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.encounters_hb`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-b/encounters/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.patients_hb` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-b/patients/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.patients_hb`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-b/patients/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.providers_hb` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-b/providers/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.providers_hb`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-b/providers/*.json"]
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.transactions_hb` 
-OPTIONS (
-  format = 'JSON',
-  uris = ['gs://healthcare-bucket-22032025/landing/hospital-b/transactions/*.json']
+CREATE EXTERNAL TABLE IF NOT EXISTS `healthcare-rcm-project-504309.bronze_dataset.transactions_hb`
+OPTIONS(
+   FORMAT = "JSON",
+   URIS = ["gs://bucket-healthcare-04082026/landing/Hospital-b/transactions/*.json"]
 );
-
 ---------------------------------------------------------------------------------------------------------------------------
