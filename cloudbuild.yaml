@@ -4,7 +4,7 @@ steps:
     entrypoint: pip
     args: ["install", "-r", "utils/requirements.txt", "--user"]
 
-  # Step 2: Run the script to upload DAGs and Data to Composer bucket
+  # Step 2: Upload DAGs and project data to the Composer bucket
   - name: 'python'
     entrypoint: python
     args:
@@ -18,5 +18,5 @@ options:
 
 substitutions:
   _DAGS_DIRECTORY: "workflows/"
-  _DAGS_BUCKET: "us-central1-demo-instance-a649b781-bucket" # Replace with your Composer bucket
+  _DAGS_BUCKET: "us-central1-healthcare-rcm--91bc5a6b-bucket"
   _DATA_DIRECTORY: "data/"
