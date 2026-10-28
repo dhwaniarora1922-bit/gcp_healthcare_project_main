@@ -29,8 +29,8 @@ SILVER_SQL_FILES = [
 
 GOLD_SQL_FILES = [
     ("gold_patient_history", f"{SQL_BASE_PATH}/gold_patient_history.sql"),
-    ("gold_provider_performance", f"{SQL_BASE_PATH}/gold_provider_performance.sql"),
-    ("gold_department_performance", f"{SQL_BASE_PATH}/gold_department_performance.sql"),
+    ("gold_provider_performance_summary", f"{SQL_BASE_PATH}/gold_provider_performance_summary.sql"),
+    ("gold_department_performance_analytics", f"{SQL_BASE_PATH}/gold_department_performance_analytics.sql"),
     ("gold_financial_metrics", f"{SQL_BASE_PATH}/gold_financial_metrics.sql"),
     (
         "gold_payor_performance_claims_summary",
