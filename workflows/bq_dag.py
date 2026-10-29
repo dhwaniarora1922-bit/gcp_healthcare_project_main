@@ -116,10 +116,12 @@ with DAG(
             project_id=PROJECT_ID,
             location=LOCATION,
             configuration={
-                "query": sql_query,
-                "useLegacySql": False,
-                "priority": "BATCH",
-            }
+                "query": {
+                    "query": sql_query,
+                    "useLegacySql": False,
+                    "priority": "BATCH",
+                }
+            },
         )
 
         gold_tasks.append(gold_task)
